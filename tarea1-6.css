@@ -1,5 +1,11 @@
-button {
+#submit {
     position: absolute;
     left: 260px;
-    bottom: 630px;
+    top: 50px;
+}
+
+#reset {
+    position: absolute;
+    left: 400px;
+    top: 50px;
 }
