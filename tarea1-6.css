@@ -1,11 +1,14 @@
-#submit {
-    position: absolute;
-    left: 260px;
-    top: 50px;
+#contenedor-botones{
+    margin: 2% 26%;
 }
 
-#reset {
+#contenedor1 {
     position: absolute;
-    left: 400px;
-    top: 50px;
+    top: 0%;
+} 
+
+#contenedor2 {
+    position: absolute;
+    top: 0%;
+    left: 12%;
 }

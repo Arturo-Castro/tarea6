@@ -44,17 +44,17 @@ function obtenerMaximo(array){
 }
 
 const cantidadDePersonas = Number(prompt('Cuantas personas son en tu grupo familiar?'));
-const nodoPagina = document.querySelector('body');
+const nodoPagina1 = document.querySelector('#contenedor1');
 
 for(let i=1; i<=cantidadDePersonas; i++){
     const nuevoTexto = document.createTextNode('Miembro ' + i);
-    nodoPagina.appendChild(crearLabel().appendChild(nuevoTexto));
-    nodoPagina.appendChild(crearInput());
-    nodoPagina.appendChild(crearBr());
+    nodoPagina1.appendChild(crearLabel().appendChild(nuevoTexto));
+    nodoPagina1.appendChild(crearInput());
+    nodoPagina1.appendChild(crearBr());
 }
 
 
-document.querySelector('button').onclick = function(){
+document.querySelector('#submit').onclick = function(){
     const nodeList = document.querySelectorAll('input');
     const array = [];
     for(let i=0; i<nodeList.length; i++){
@@ -63,7 +63,7 @@ document.querySelector('button').onclick = function(){
         }
         array.push(Number(nodeList[i].value));
     }
-    const nodoPagina = document.querySelector('body');
+    const nodoPagina2 = document.querySelector('body');
     const nuevoParrafo = document.createElement('p');
     const nuevoEm = document.createElement('em');
     const texto1 = document.createTextNode(`El promedio es ${calcularPromedioArray(array)}`);
@@ -76,9 +76,20 @@ document.querySelector('button').onclick = function(){
     nuevoEm.appendChild(texto3);
     nuevoEm.appendChild(crearBr());
     nuevoParrafo.appendChild(nuevoEm);
-    nodoPagina.appendChild(nuevoParrafo);
+    nodoPagina2.appendChild(nuevoParrafo);
     return false;
 }
+
+document.querySelector('#agregar').onclick = function(){
+    const nodoPagina3 = document.querySelector('#contenedor2');
+    const nuevoTexto2 = document.createTextNode('Salario Anual');
+    nodoPagina3.appendChild(crearLabel().appendChild(nuevoTexto2));
+    nodoPagina3.appendChild(crearInput());
+    nodoPagina3.appendChild(crearBr());
+    return false;
+}
+
+
 
 document.querySelector('#reset').onclick = function(){
     window.location.reload();
